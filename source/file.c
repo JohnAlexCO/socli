@@ -15,3 +15,5 @@ int file_write (char *filename, char *buffer, int max) {
         if (fputc(buffer[cursor], fp) == EOF) { fclose(fp); return false; }
     } fclose(fp); return cursor;
 }
+
+bool file_exists (char *filename) { struct stat buffer; return (stat(filename, &buffer) == 0); }

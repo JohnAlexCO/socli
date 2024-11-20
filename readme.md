@@ -2,8 +2,8 @@
 
 socli is an application for interacting
 with decentralized social media like
-[bluesky](),
-[mastodon](),
+[bluesky](https://bsky.app/),
+[mastodon](https://joinmastodon.org/),
 and RSS feeds from one shared interface
 
 ## Getting Started
@@ -32,23 +32,25 @@ run its configuration step
 
 > [!NOTE] more platforms are eventually planned
 
-### Postfeed
-When viewing your feed, there will be an `>` next to
-the currently selected post.
-Pressing the `right-arrow` key will zoom in on the post,
-and the `left-arrow` will back out again.
-`Space` will like the selected post,
-and `Backspace` will unlike the selected post.
+## Posts & Feed
+On launch, you will be viewing the `feed`, and a post will be
+currently selected, represented with a `>` next to it.
+Pressing `right-arrow` will zoom in on the post,
+and pressing `left-arrow` will go back.
+`Space`/`Enter` and `backspace` like and unlike the selected post.
+`A` shows information about a posts' author.
+`F` and `U` follow and unfollow a posts' author.
+`/` prompts for and goes to a users' profile.
+`P` prompts for and then posts to all platforms.
 
-### Posts
-When a post is selected or zoomed,
-`Space` and `Backspace` will like or unlike the post.
-Pressing `A` will show information about the author.
+## Design
 
-### Pages / Users
-From posts or the user's page,
-you can press `F` to follow a user
-and `U` to unfollow them.
+`socli` is separated into the main application,
+and its subapplications for handling each platform.
+The reason for this is twofold: updates for each
+platform subapplication can be done totally
+separately, and the subapplications can be
+repurposed, for example as a dependency of a GUI application
 
 ## Build from Source
 
@@ -61,8 +63,6 @@ and `U` to unfollow them.
 > - pip 23.\*.\*
 > - atproto
 > - argparse
-> - base64
-> - cryptography
 
 The build process for socli is pretty minimal.
 socli builds into a binary for each platform

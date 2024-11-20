@@ -1,7 +1,5 @@
-# https://www.geeksforgeeks.org/encrypt-and-decrypt-files-using-python/
 # https://docs.bsky.app/docs/get-started
 import atproto
-from cryptography.fernet import Fernet
 import argparse
 import base64
 

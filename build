@@ -1,3 +1,5 @@
+xxd -n root_help -i ./locale/help ./generated/help.h
 cython --embed ./bsky/bluesky.py -o ./generated/bluesky.c --3str
 gcc -o ./bin/bluesky ./generated/bluesky.c -I /usr/include/python3.11 -L /usr/lib/python3.11 -lpython3.11
+gcc -o ./generated/locktest ./source/lock.c -D LOCK_TEST
 gcc -o ./bin/socli ./source/socli.c
