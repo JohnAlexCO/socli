@@ -30,7 +30,8 @@ run its configuration step
     - `socli bluesky`
     - `socli mastodon`
 
-> [!NOTE] more platforms are eventually planned
+> [!NOTE]
+> more platforms are eventually planned
 
 ## Posts & Feed
 On launch, you will be viewing the `feed`, and a post will be
